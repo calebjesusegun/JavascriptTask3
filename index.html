@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JAVASCRIPT TASK 3</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset = utf-8" />
+    <meta name="viewport" content="width = device - width, initial-scale = 1" />
+  </head>
+  <body>
+    <script>
+      function divisible(num) {
+        let arrayDivisible = [];
+
+        for (let i = 1; i <= num; i++) {
+          if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0) {
+            arrayDivisible.push("yu-gi-oh");
+          } else if (i % 2 == 0 && i % 3 == 0) {
+            arrayDivisible.push("yu-gi");
+          } else if (i % 2 == 0 && i % 5 == 0) {
+            arrayDivisible.push("yu-oh");
+          } else if (i % 3 == 0 && i % 5 == 0) {
+            arrayDivisible.push("gi-oh");
+          } else if (i % 2 == 0) {
+            arrayDivisible.push("yu");
+          } else if (i % 3 == 0) {
+            arrayDivisible.push("gi");
+          } else if (i % 5 == 0) {
+            arrayDivisible.push("oh");
+          } else {
+            arrayDivisible.push(i);
+          }
+        }
+
+        return arrayDivisible;
+      }
+
+      //THIS IS FOR NUMBERS FROM 1 TO 100
+      console.log(divisible(100));
+
+      //THIS IS FOR NUMBERS FROM 1 TO 87
+      console.log(divisible(87));
+    </script>
+  </body>
+</html>
